@@ -22,6 +22,25 @@ export type StreamFn = (streamer: EventStreamer) => CloseFn;
  *
  * @param fn A stream function
  * @returns A response object
+ *
+ * @example
+ * ```ts
+ * Deno.serve(() =>
+    streamServerSent((streamer) => {
+        let sequences = 0;
+        const interval = setInterval(
+            () =>
+                streamer.postEvent({
+                    type: "ping",
+                    data: String(sequences++),
+                }),
+            2_000,
+        );
+
+        return () => clearInterval(interval);
+    })
+ );
+ * ```
  */
 export function streamServerSent(fn: StreamFn): Response {
 	const encoder = new TextEncoder();
