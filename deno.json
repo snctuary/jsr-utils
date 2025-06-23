@@ -1,6 +1,6 @@
 {
 	"name": "@seaweeed/util",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"exports": {
 		"./server-sent-events": "./util/server_sent_events.ts"
 	},
