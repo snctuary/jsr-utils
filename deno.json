@@ -2,7 +2,7 @@
 	"name": "@seaweeed/util",
 	"version": "1.0.0",
 	"exports": {
-		"./server-sent-events": "./server_sent_events.ts"
+		"./server-sent-events": "./util/server_sent_events.ts"
 	},
 	"tasks": {
 		"dev": "deno run --watch mod_test.ts"
