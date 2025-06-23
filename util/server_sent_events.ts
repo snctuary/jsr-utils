@@ -23,7 +23,7 @@ export type StreamFn = (streamer: EventStreamer) => CloseFn;
  * @param fn A stream function
  * @returns A response object
  */
-export function streamServerSent(fn: StreamFn) {
+export function streamServerSent(fn: StreamFn): Response {
 	const encoder = new TextEncoder();
 	let closeFn: CloseFn;
 
