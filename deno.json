@@ -1,0 +1,17 @@
+{
+	"name": "@seaweeed/util",
+	"version": "1.0.0",
+	"exports": {
+		"./server-sent-events": "./server_sent_events.ts"
+	},
+	"tasks": {
+		"dev": "deno run --watch mod_test.ts"
+	},
+	"license": "MIT",
+	"imports": {
+	},
+	"fmt": {
+		"indentWidth": 4,
+		"useTabs": true
+	}
+}
